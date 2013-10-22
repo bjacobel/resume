@@ -1,0 +1,213 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{scrartcl}
+
+\reversemarginpar % Move the margin to the left of the page 
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{Brian Jacobel}}\vspace{1.5em} % Your name
+
+\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+
+%\NewEntry{}{\textit{Born in Canada,}}{20 November 1987} % Birthplace and date
+
+\NewEntry{email}{\href{mailto:bjacobel@bowdoin.edu}{bjacobel@bowdoin.edu}} % Email address
+
+\NewEntry{website}{\href{http://www.bjacobel.com}{www.bjacobel.com}} % Personal website
+
+\NewEntry{phone}{(507) 210 3812} % Phone number(s)
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+\noindent\spacedlowsmallcaps{Goals}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+
+\Description{I have to write goals? Fuck this.}\vspace{2em} % Goal text
+
+%\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Education}\vspace{1em}
+
+\NewEntry{2010--Present}{Bowdoin College}
+
+\Description{\MarginText{Bachelor of Arts}\textsc{graduation:} May 2014 \ \ $\cdotp$\ \  \textsc{majors:} Computer Science, Math\ \ \newline 
+Undergraduate study with a focus on computer networks and security, a secondary focus in math as related to optimization and cryptology, and interests in environmental studies and film studies.}
+
+%------------------------------------------------
+
+\NewEntry{2009-2011}{St. Olaf College}
+
+\Description{\MarginText{Supplemental Courses}\textsc{Calculus II}\ \ $\cdotp$\ \ \textsc{Linear Algebra} \ \ $\cdotp$\ \ \textsc{Parallel Computing Systems}  \newline 
+Courses in areas of my interest taken to exceed high school requirements or gain college credit while on semester break.}
+
+%------------------------------------------------
+
+\NewEntry{2006-2010}{Northfield High School}
+
+\Description{\MarginText{High School}Public high school in Northfield, Minnesota\ \ $\cdotp$\ \ \textsc{GPA:} 3.989 }
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
+
+\NewEntry{2010--2011}{Networking Intern, \textsc{Bowdoin College Information Technology Dept.}}
+
+\Description{\MarginText{Networking Intern}Worked with the Network Operations branch of Bowdoin College's IT department. Provided support for wireless networks and clients, and conducted a campus-wide survey of antenna position and signal strength to prepare for a College wireless system overhaul.}
+
+%------------------------------------------------
+
+\NewEntry{2011--Present}{QSkills Tutor, \textsc{Bowdoin College CLT}}
+
+\Description{\MarginText{Tutor}Member of the Center for Learning and Teaching's Quantitative Skills tutoring program and four-semester teaching assistant for Computer Science 101. Responsibilities include holding weekly study groups and assisting students with building computer skills and mastery of Java.}
+
+%------------------------------------------------
+
+\NewEntry{2011--2012}{Head Photo Editor, \textsc{The Bowdoin Orient}}
+
+\Description{\MarginText{Photo Editor}Edited and arranged all photographic material for the nation's oldest continuously produced college weekly. Managed a team of 10 photographers. Assisted with the transition of the Orient to a web-first publishing organization.}
+
+%------------------------------------------------
+
+\NewEntry{2010--Present}{Lab Manager, \textsc{Bowdoin College Information Technology Dept.}}
+
+\Description{\MarginText{Lab Manager}Manager of one of Bowdoin College's public computing labs. Responsibilities include scheduling and overseeing up to twenty lab assistants, assisting students with computer issues and maintaining all computer and printing systems. Includes the period 2011--\textit{Present}, when specially designated as a multimedia software support specialist.}
+
+%------------------------------------------------
+
+\NewEntry{2012--Present}{Photographer, \textsc{Bowdoin College Communications Dept.}}
+
+\Description{\MarginText{Photographer}Contract photographer for Bowdoin College's online alumni publication, the Bowdoin Daily Sun.}
+
+%------------------------------------------------
+
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Research Experience}\vspace{1em}
+
+\NewEntry{Summer 2012}{MSG Consortium Fellow\ \ $\cdotp$\ \ \textsc{Bowdoin College}}
+
+\Description{\MarginText{Maine Space Grant}}%\\ Reference: Bill \textsc{Lumbergh}\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:bill@initech.com}{bill@initech.com}}
+
+%------------------------------------------------
+
+\NewEntry{Summer 2011}{Gibbons Fellow\ \ $\cdotp$\ \  \textsc{Bowdoin College}}
+
+\Description{\MarginText{Gibbons Fellow}}%\\ Reference: John \textsc{McDonald}\ \ $\cdotp$\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:john@lehman.com}{john@lehman.com}}
+
+%------------------------------------------------
+
+
+\vspace{1em} % Extra space between major sections
+
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Computer Skills}\vspace{1em}
+
+\Description{\MarginText{Basics}Windows, OSX, Linux, Microsoft Office}
+
+\Description{\MarginText{Languages}Java, C/C++, Python, Objective-C, x86/\textsc{arm} Assembly}
+
+\Description{\MarginText{Web Design}HTML, CSS, PHP, Javascript, jQuery, Node.js}
+
+\Description{\MarginText{SysAdmin}Debian, Apache, Nginx, MySQL}
+
+\Description{\MarginText{Media}Adobe Photoshop \& Illustrator, Final Cut Pro}
+
+\Description{\MarginText{Misc.}Git, GitHub, Emacs, i\textsc{OS SDK}, Wireshark, LaTeX}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Other Information}\vspace{1em}
+
+\Description{\MarginText{Awards}2011\ \ $\cdotp$\ \ I might want to ditch this because I don't really have any awards}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{2010\ \ $\cdotp$\ \ Nope, no awards in 2010 either}
+
+%------------------------------------------------
+
+\vspace{1em}
+
+\Description{\MarginText{Posters/Presentations}2012\ \ $\cdotp$\ \ Poster at the President's Science Symposium, Bowdoin College}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{2011\ \ $\cdotp$\ \ Presentation to the Bowdoin College Board of Trustees on research conducted as a Gibbons Fellow}
+
+%------------------------------------------------
+
+\Description{\MarginText{Interests}Photography\ \ $\cdotp$\ \ Biking\ \ $\cdotp$\ \ Robotics\ \ $\cdotp$\ \ Film\ \ $\cdotp$\ \ Graphic Design}
+
+%----------------------------------------------------------------------------------------
+
+\end{cv}
+
+\end{document}
