@@ -14,144 +14,292 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------
 
 \documentclass{scrartcl}
 
-\reversemarginpar % Move the margin to the left of the page 
+% Move the margin to the left of the page
+\reversemarginpar
 
-\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+% New command defining the margin text style
+\newcommand{
+    \MarginText}[1]{
+        \marginpar{
+            \raggedleft
+            \itshape
+            \small#1
+        }
+}
 
-\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+% Use the classicthesis style for the style of the document
+\usepackage[nochapters]{classicthesis}
 
-\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+% Remove the date from the document's footer
+\date{}
 
-\usepackage[left=1.75in,right=.85in,top=.85in,bottom=.75in]{geometry}
+% Use the currvita style for the layout of the document
+\usepackage[LabelsAligned]{currvita}
 
-\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+\usepackage[left=2in,right=.9in,top=.65in,bottom=.65in]{geometry}
 
-\usepackage{hyperref} % Required for adding links	and customizing them
-\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+\usepackage{xcolor}
 
-\newlength{\datebox}\settowidth{\datebox}{Summer 2013} % Set the width of the date box in each block
+\definecolor{myblue}{HTML}{228FC4}
 
-\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
-\vspace{0.15em}} % Add some white space after each new entry
+% Font color of your name at the top
+\renewcommand{\cvheadingfont}{
+    \Large
+    \color{Maroon}
+}
 
-\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{.75em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+% Required for adding links and customizing them
+\usepackage{hyperref}
+
+% Set link colors
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon}
+
+% Set the width of the date box in each block
+\newlength{\datebox}\settowidth{\datebox}{}
+
+% Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and the position/employer/location field
+\newcommand{\NewEntry}[2]{
+    \noindent
+    \hangindent=1em
+    \hangafter=0 #1 #2
+    \vspace{0.15em}
+}
+
+% Define a command for descriptions of each entry - change spacing and font sizes here
+\newcommand{\Description}[1]{
+    \hangindent=1em
+    \hangafter=0
+    \noindent
+    \raggedright
+    \footnotesize{#1}
+    \par
+    \normalsize
+    \vspace{.75em}
+}
 
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------
 
 \begin{document}
 
 \thispagestyle{empty} % Stop the page count at the bottom of the first page
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------
 
-\begin{cv}{\spacedallcaps{Brian Jacobel}}\vspace{1em}
+\begin{cv}{
 
-\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.75em}
+\hspace{-4.5em}
+\centerline{
+    \spacedallcaps{Brian Jacobel}}\vspace{.8em}
+}
 
-\begin{tabular}{r l r l}
-\textit{email} & \href{mailto:bjacobel@gmail.com}{bjacobel@gmail.com} & \textit{phone} & (507) 210 3812 \\ \vspace{0.5em}
-\textit{web} & \href{http://bjacobel.com}{bjacobel.com} & \textit{portfolio} & \href{http://github.com/bjacobel}{github.com/bjacobel} \\
-\end{tabular}
+\hspace{-4.5em}
+\centerline{
+    \textit{email}
+    \enspace
+    \href{mailto:brian@bjacobel.com}{brian@bjacobel.com}
+    \qquad
+    \textit{portfolio}
+    \enspace
+    \href{http://github.com/bjacobel}{github.com/bjacobel}
+    \qquad
+    \textit{web}
+    \enspace
+    \href{http://bjacobel.com}{bjacobel.com}
+}
+
+\vspace{1em}
+
+%----------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{\large{Education}}
 
 \vspace{.75em}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
+\NewEntry{
+    \kern -3pt
+    \textit{September 2010 -- May 2014}
+    ~~$\cdotp$~~
+    Bachelor of Arts
+    ~~$\cdotp$~~
+    \textsc{\large Bowdoin College}
+}
 
-\noindent\spacedlowsmallcaps{Education}\vspace{.5em}
+\Description{
+    \MarginText{Bachelor of Arts}
+    \kern -3pt
+    \textsc{major:} Computer Science
+    ~~$\cdotp$~~
+    \textsc{minor:} Math
+    ~~$\cdotp$~~
+    \textsc{gpa:} $3.469$ \newline
+    \textsc{Honors:} Sarah and James Bowdoin Scholar \\
+}
 
-\NewEntry{2010--Present}{\textbf{Bachelor of Arts}\ \ $\cdotp$\ \  \textsc{\large Bowdoin College}}
-
-\Description{\MarginText{Bachelor of Arts}\textsc{graduation:} May 2014 \ \ $\cdotp$\ \  \textsc{major:} Computer Science \textsc{minor:} Math \ $\cdotp$\ \ \textsc{gpa:} $3.469$ \newline 
-\textsc{Honors:} Sarah and James Bowdoin Scholar \\ 
-My studies at Bowdoin have focused on security, robotics, software development and the interdisciplinary nature of computer science.}\vspace{-1.5em}
+\vspace{-1.5em}
 
 \NewEntry{}{}
 
-\Description{\MarginText{Selected Coursework}Computer Networks \ \ $\cdotp$\ \  Artificial Intelligence \ \ $\cdotp$\ \    Open Source Software Development \ \ $\cdotp$\ \  Algorithms \ \ $\cdotp$\ \ Computer and Network Security \ \ $\cdotp$\ \  Geographic Information Systems \ \ $\cdotp$\ \  Advanced Topics in Applied Math \ \ $\cdotp$\ \  Independent Study in Web Development}
+\Description{
+    \MarginText{Selected Coursework}
+    \kern -3pt
+    Computer Networks
+    ~~$\cdotp$~~
+    Artificial Intelligence
+    ~~$\cdotp$~~
+    Open Source Software Development
+    ~~~~
+    Algorithms
+    ~~$\cdotp$~~
+    Computer and Network Security
+    ~~$\cdotp$~~
+    Geographic Information Systems \\
+    Advanced Topics in Applied Math
+    ~~$\cdotp$~~
+    Independent Study in Web Development
+}
+
+\vspace{.6em} % Extra space between major sections
 
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------
 %	SKILLS
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------
 
-\spacedlowsmallcaps{Skills}\vspace{.75em}
+\spacedlowsmallcaps{\large{Skills}}
 
-\Description{\MarginText{Basics}OS X, Linux, Windows, Adobe CS}\vspace{-0.35em}
+\vspace{.75em}
 
-\Description{\MarginText{Languages}Python, Java, PHP, Javascript, Ruby, C++, Objective-C}\vspace{-0.35em}
+\Description{
+    \MarginText{Languages}
+    \kern -3pt
+    Python,
+    JavaScript,
+    Ruby,
+    Go,
+    Java,
+    C++,
+    PHP,
+    Objective-C
+    (most to least proficient)
+}
 
-\Description{\MarginText{Web Development}HTML, CSS, CodeIgniter, Django, Ruby on Rails, jQuery}\vspace{-0.35em}
+\vspace{-0.4em}
 
-\Description{\MarginText{DB \& Systems}Debian, RHEL, Apache, Nginx, MySQL, PostgreSQL, Redis}\vspace{-0.35em}
+\Description{
+    \MarginText{Web Development}
+    \kern -3pt
+    React,
+    Redux,
+    Webpack,
+    AngularJS,
+    Sass,
+    Ruby on Rails,
+    Django,
+    Flask,
+    Martini
+}
 
-\Description{\MarginText{Misc.}Git, Emacs, iOS SDK, LaTeX}\vspace{-0.35em}
+\vspace{-0.4em}
 
-\vspace{.5em} % Extra space between major sections
+\Description{
+    \MarginText{DB \& Systems}
+    \kern -3pt
+    AWS EC2 \& Lambda,
+    Docker,
+    PostgreSQL,
+    DynamoDB,
+    MongoDB
+}
 
-%----------------------------------------------------------------------------------------
+\vspace{-0.4em}
+
+\Description{
+    \MarginText{Misc.}
+    \kern -3pt
+    Git,
+    REST,
+    TDD,
+    CloudFormation,
+    AWS IAM,
+    Ansible,
+    Responsive Web Design
+}
+\vspace{-0.4em}
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------
 %	WORK EXPERIENCE
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------
 
-\noindent\spacedlowsmallcaps{Work Experience}\vspace{.5em}
+\noindent\spacedlowsmallcaps{\large{Work Experience}}
 
-\NewEntry{Summer 2013}{\textbf{Digital Technology Intern}\ \ $\cdotp$\ \  \textsc{\large Atlantic Media}}
-
-\Description{\MarginText{Web Development Intern}Worked with a small team of full-stack developers on the PHP and Django codebases supporting Atlantic Media's digital properties, including {\href{http://theatlantic.com}{theatlantic.com}} and {\href{http://theatlanticwire.com}{theatlanticwire.com}}. Participated in standups and code reviews, and deployed code to production weekly. }
-
-%-----------------------------------------------
-
-\NewEntry{2013-2014}{\textbf{Web Developer}\ \ $\cdotp$\ \  \textsc{\large The Bowdoin Orient}}
-
-\Description{\MarginText{Full-stack Developer}Maintained and expanded  {\href{http://bowdoinorient.com}{bowdoinorient.com}}, a custom PHP/MySQL CMS and website for Bowdoin's campus newspaper. Responsible for all online feature development, support and visual design. During tenure, the Princeton Review named the Orient the nation's best liberal arts college newspaper.}
-
-%-----------------------------------------------
-
-\NewEntry{2011--Present}{\textbf{QSkills Tutor}\ \ $\cdotp$\ \  \textsc{\large Bowdoin College C.L.T.}}
-
-\Description{\MarginText{Tutor}Member of the Center for Learning and Teaching's Quantitative Skills tutoring program and six-semester teaching assistant for Computer Science 101. Responsibilities included holding weekly study groups and helping students master programming skills and basic Java.}
-
-%------------------------------------------------
-
-\NewEntry{2010--2011}{\textbf{Networking Intern}\ \ $\cdotp$\ \  \textsc{\large Bowdoin College I.T.}}
-
-\Description{\MarginText{Networking Intern}Worked with the Network Operations branch of Bowdoin College's Information Technology Department. Provided support for wireless networks and clients, and assisted in preparations for a complete wireless system overhaul.}
-
-%------------------------------------------------
+\vspace{.75em}
 
 
-\vspace{.5em} % Extra space between major sections
+\NewEntry{
+    \kern -3pt
+    \textit{June 2015 -- January 2016}
+    ~~$\cdotp$~~
+    \textsc{\large Localytics}
+}
 
-%----------------------------------------------------------------------------------------
-%	RESEARCH EXPERIENCE
-%----------------------------------------------------------------------------------------
-
-\noindent\spacedlowsmallcaps{Research Experience}\vspace{.5em}
-
-\NewEntry{Summer 2012}{\textbf{MSG Consortium Fellow}\ \ $\cdotp$\ \ \textsc{\large Bowdoin College}}
-
-\Description{\MarginText{Maine Space Grant}Awarded a grant by the Maine Space Grant Consortium, a NASA affiliate, to conduct summer research on robot localization and wireless communication. The summer's research involved a trip to the international RoboCup robotics competition in Mexico City.}%\\ Reference: Bill \textsc{Lumbergh}\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:bill@initech.com}{bill@initech.com}}
-
-%------------------------------------------------
-
-\NewEntry{Summer 2011}{\textbf{Gibbons Fellow}\ \ $\cdotp$\ \  \textsc{\large Bowdoin College}}
-
-\Description{\MarginText{Gibbons Fellow}Awarded a grant from Bowdoin College Information Technology to conduct research with Prof. Daniela Oliveira on a system to combat control-flow hijacking attacks in virtual server environments.}%\\ Reference: John \textsc{McDonald}\ \ $\cdotp$\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:john@lehman.com}{john@lehman.com}}
-
-%------------------------------------------------
+\Description{
+    \MarginText{Software Engineer}
+    \kern -3pt
+    Contributed significant functionality to Localytics' analytics and marketing automation {\href{https://dashboard.localytics.com/ecommerce}{dashboard}}, a large AngularJS and Ruby on Rails codebase. Worked with a small team to ship Remarketing, a feature set which generated \$280,000 ARR in its first quarter. With the Remarketing team, led the Localytics frontend engineering team in several major technical debt reduction efforts including migration from Coffeescript to ES6 and from Sprockets to Webpack. Using ES6, React and AWS Lambda, worked with a cross-functional team to build the frontend for an internal tool that provides permissions and security for a massive-scale AWS deployment. Packaged, documented and trained others on these technologies in preparation for rolling out their use across the engineering team.
+}
 
 
-\vspace{.5em} % Extra space between major sections
+\vspace{.75em}
+
+
+\NewEntry{
+    \kern -3pt
+    \textit{June 2014 -- June 2015}
+    ~~$\cdotp$~~
+    \textsc{\large Raizlabs, Inc.}
+}
+
+\Description{
+    \MarginText{Full-stack Web Developer}
+    \kern -3pt
+    Created responsive web applications built to client specifications using AngularJS, BackboneJS and Ruby on Rails. Developed web back-ends to power native applications using Go, Django, PostgreSQL, MongoDB, AWS and Ansible. Worked closely with members of Raizlabs' native development teams to architect, develop and review REST APIs for clients including Fortune 50 companies and innovative start-ups.
+}
+
+\vspace{.75em}
+
+\NewEntry{
+    \kern -3pt
+    \textit{June -- December 2013}
+    ~~$\cdotp$~~
+    \textsc{\large Atlantic Media}
+}
+
+\Description{
+    \MarginText{Digital Technology Intern}
+    \kern -3pt
+    Worked with a small, agile team of full-stack developers on the PHP and Django codebases supporting Atlantic Media's digital properties. Deployed code to {\href{http://theatlantic.com}{theatlantic.com}} and {\href{http://theatlanticwire.com}{theatlanticwire.com}} daily. Participated as a full member of the team, including code reviews and daily standups. Individually carried a number of projects to completion, including an interactive feature experienced by over 250,000 visitors. Continued working for the Atlantic as a freelance web developer through the end of 2013.
+}
+
+\vspace{1em}
+
+%----------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------
+
+
 
 \end{cv}
 
