@@ -42,7 +42,7 @@
 % Use the currvita style for the layout of the document
 \usepackage[LabelsAligned]{currvita}
 
-\usepackage[left=2in,right=.9in,top=.65in,bottom=.65in]{geometry}
+\usepackage[left=2in,right=.9in,top=.45in,bottom=.65in]{geometry}
 
 \usepackage{xcolor}
 
@@ -137,7 +137,7 @@
 
 \Description{
     \MarginText{Bachelor of Arts}
-    \kern -3pt
+    \kern -5pt
     \textsc{major:} Computer Science
     ~~$\cdotp$~~
     \textsc{minor:} Math
@@ -152,7 +152,7 @@
 
 \Description{
     \MarginText{Selected Coursework}
-    \kern -3pt
+    \kern -5pt
     Computer Networks
     ~~$\cdotp$~~
     Artificial Intelligence
@@ -161,15 +161,11 @@
     ~~~~
     Algorithms
     ~~$\cdotp$~~
-    Computer and Network Security
-    ~~$\cdotp$~~
-    Geographic Information Systems \\
-    Advanced Topics in Applied Math
-    ~~$\cdotp$~~
     Independent Study in Web Development
+    ~~$\cdotp$~~
+    Computer and Network Security
 }
 
-\vspace{.6em} % Extra space between major sections
 
 
 %----------------------------------------------------------------------------
@@ -178,11 +174,11 @@
 
 \spacedlowsmallcaps{\large{Skills}}
 
-\vspace{.75em}
+\vspace{1em}
 
 \Description{
     \MarginText{Languages}
-    \kern -3pt
+    \kern -5pt
     Python,
     JavaScript,
     Ruby,
@@ -198,7 +194,7 @@
 
 \Description{
     \MarginText{Web Development}
-    \kern -3pt
+    \kern -5pt
     React,
     Redux,
     Webpack,
@@ -214,7 +210,7 @@
 
 \Description{
     \MarginText{DB \& Systems}
-    \kern -3pt
+    \kern -5pt
     AWS EC2 \& Lambda,
     Docker,
     PostgreSQL,
@@ -226,7 +222,7 @@
 
 \Description{
     \MarginText{Misc.}
-    \kern -3pt
+    \kern -5pt
     Git,
     REST,
     TDD,
@@ -237,7 +233,7 @@
 }
 \vspace{-0.4em}
 
-\vspace{1em} % Extra space between major sections
+\vspace{.75em}
 
 %----------------------------------------------------------------------------
 %	WORK EXPERIENCE
@@ -257,7 +253,7 @@
 
 \Description{
     \MarginText{Software Engineer}
-    \kern -3pt
+    \kern -5pt
     Contributed significant functionality to Localytics' analytics and marketing automation {\href{https://dashboard.localytics.com/ecommerce}{dashboard}}, a large AngularJS and Ruby on Rails codebase. Worked with a small team to ship Remarketing, a feature set which generated \$280,000 ARR in its first quarter. With the Remarketing team, led the Localytics frontend engineering team in several major technical debt reduction efforts including migration from Coffeescript to ES6 and from Sprockets to Webpack. Using ES6, React and AWS Lambda, worked with a cross-functional team to build the frontend for an internal tool that provides permissions and security for a massive-scale AWS deployment. Packaged, documented and trained others on these technologies in preparation for rolling out their use across the engineering team.
 }
 
@@ -269,12 +265,12 @@
     \kern -3pt
     \textit{June 2014 -- June 2015}
     ~~$\cdotp$~~
-    \textsc{\large Raizlabs, Inc.}
+    \textsc{\large Raizlabs}
 }
 
 \Description{
     \MarginText{Full-stack Web Developer}
-    \kern -3pt
+    \kern -5pt
     Created responsive web applications built to client specifications using AngularJS, BackboneJS and Ruby on Rails. Developed web back-ends to power native applications using Go, Django, PostgreSQL, MongoDB, AWS and Ansible. Worked closely with members of Raizlabs' native development teams to architect, develop and review REST APIs for clients including Fortune 50 companies and innovative start-ups.
 }
 
@@ -289,16 +285,62 @@
 
 \Description{
     \MarginText{Digital Technology Intern}
-    \kern -3pt
+    \kern -5pt
     Worked with a small, agile team of full-stack developers on the PHP and Django codebases supporting Atlantic Media's digital properties. Deployed code to {\href{http://theatlantic.com}{theatlantic.com}} and {\href{http://theatlanticwire.com}{theatlanticwire.com}} daily. Participated as a full member of the team, including code reviews and daily standups. Individually carried a number of projects to completion, including an interactive feature experienced by over 250,000 visitors. Continued working for the Atlantic as a freelance web developer through the end of 2013.
 }
 
-\vspace{1em}
+\vspace{.5em}
 
 %----------------------------------------------------------------------------
 %	PROJECTS
 %----------------------------------------------------------------------------
 
+\noindent\spacedlowsmallcaps{\large{Selected Personal Projects}}
+
+\vspace{1em}
+
+\Description{
+    \MarginText{Bongo}
+    \kern -5pt
+    A custom CMS and news site developed for the Bowdoin Orient, my college newspaper.
+    \newline
+    \textit{Using:}
+    Django, Python 2/3, Ansible, AWS EC2
+    \qquad
+    \textit{At:}
+    \href{https://github.com/bowdoinorient/bongo}{github.com/bowdoinorient/bongo}
+}
+
+
+\Description{
+    \MarginText{Gifs}
+    \kern -5pt
+    A webapp for storing, sharing, tagging and searching your personal gif collection.
+    \newline
+    \textit{Using:}
+    React, Redux, ES6, Webpack, AWS S3, DynamoDB
+    \qquad
+    \textit{At:}
+    \href{https://github.com/bjacobel/gifs}{github.com/bjacobel/gifs}
+}
+
+
+\Description{
+    \MarginText{BosFoodFails}
+    \kern -5pt
+    A Twitter bot that tracks health inspection violations in Boston restaurants.
+    \newline
+    \textit{Using:}
+    Python, AWS Lambda, DynamoDB, KMS
+    \qquad
+    \textit{At:}
+    \href{https://github.com/bjacobel/bosfoodfails}{github.com/bjacobel/bosfoodfails}
+}
+
+\Description{
+    \kern -5pt
+    More at \href{https://bjacobel.com/projects}{bjacobel.com/projects}
+}
 
 
 \end{cv}
