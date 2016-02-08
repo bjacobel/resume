@@ -1,5 +1,7 @@
+#!/bin/bash
+
 # Install and configure AWS CLI if it's not installed
-command -v aws >/dev/null 2>&1 || { pip install awscli; aws configure }
+command -v aws >/dev/null 2>&1 || { pip install awscli; aws configure; }
 
 # Current version of AWS CLI only has beta Cloudfront support
 aws configure set preview.cloudfront true
