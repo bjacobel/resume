@@ -3,8 +3,10 @@ before_install:
   - curl -O https://raw.githubusercontent.com/scottkosty/install-tl-ubuntu/master/install-tl-ubuntu
   - chmod +x ./install-tl-ubuntu
 install:
-  - sudo ./install-tl-ubuntu
+  - sudo ./install-tl-ubuntu --profile="$(pwd)/texlive.profile"
 script:
+  - export PATH=$PATH:/tmp/texlive/bin/x86_64-linux
+  - sudo tlmgr install koma-script
   - make tex
 after_success:
   - pip install --user awscli
