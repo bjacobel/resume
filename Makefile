@@ -6,7 +6,7 @@ default: tex upload invalidate
 
 tex:
 	mkdir -p build
-	pdftex --output-directory=build resume.tex
+	pdflatex --output-directory=build resume.tex
 
 upload:
 	aws s3api put-object \
